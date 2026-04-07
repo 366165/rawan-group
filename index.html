@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Rawan Group</title>
 
 <style>
@@ -18,13 +17,8 @@ body {
 nav {
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  padding:15px 30px;
+  padding:15px 20px;
   background:#071521;
-}
-
-nav h1 {
-  font-size:20px;
 }
 
 nav a {
@@ -40,16 +34,9 @@ header {
 }
 
 header img {
-  width:100px;
-  margin-bottom:20px;
+  width:80px;
 }
 
-header h2 {
-  font-size:40px;
-  margin:10px 0;
-}
-
-/* BUTTON */
 .btn {
   background:#00c896;
   padding:10px 20px;
@@ -60,40 +47,40 @@ header h2 {
 
 /* PRODUCTS */
 .products {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  padding:40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  padding:20px;
 }
 
 .card {
   background:white;
   color:black;
-  width:300px;
-  margin:15px;
-  padding:20px;
-  border-radius:15px;
+  padding:15px;
+  border-radius:10px;
   text-align:center;
-  box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
 .card img {
   width:100%;
-  border-radius:10px;
 }
 
-.card h3 {
-  margin:15px 0 10px;
-}
-
-.card p {
-  font-size:14px;
+/* WHATSAPP */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:12px;
+  border-radius:50%;
+  color:white;
+  text-decoration:none;
 }
 
 /* FOOTER */
 footer {
   text-align:center;
-  padding:20px;
+  padding:15px;
   background:#071521;
 }
 </style>
@@ -101,59 +88,53 @@ footer {
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
-  <h1>Rawan Group</h1>
+  <b>Rawan Group</b>
   <div>
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">Contact</a>
+    <a href="#">الرئيسية</a>
+    <a href="#products">الأجهزة</a>
   </div>
 </nav>
 
-<!-- HERO -->
 <header>
-  <!-- حط اسم اللوقو هنا -->
   <img src="IMG_5271.jpeg">
-
   <h2>Rawan Group</h2>
-  <p>Medical & Ophthalmology Equipment</p>
-
-  <a href="#products" class="btn">View Products</a>
+  <p>معدات طب وجراحة العيون</p>
+  <a href="#products" class="btn">عرض الأجهزة</a>
 </header>
 
-<!-- PRODUCTS -->
 <section id="products" class="products">
 
   <div class="card">
     <img src="IMG_5271.jpeg">
     <h3>YAG Laser</h3>
-    <p>ليزر جراحي دقيق للعيون</p>
+    <p>ليزر جراحي دقيق</p>
   </div>
 
   <div class="card">
     <img src="IMG_5271.jpeg">
     <h3>Refraction Unit</h3>
-    <p>جهاز فحص نظر متكامل</p>
+    <p>وحدة فحص نظر</p>
   </div>
 
   <div class="card">
     <img src="IMG_5271.jpeg">
     <h3>Slit Lamp</h3>
-    <p>جهاز فحص العين الأمامي</p>
+    <p>فحص العين الأمامي</p>
   </div>
 
   <div class="card">
     <img src="IMG_5271.jpeg">
-    <h3>Surgical Microscope</h3>
-    <p>ميكروسكوب جراحي للعيون</p>
+    <h3>Microscope</h3>
+    <p>ميكروسكوب جراحي</p>
   </div>
 
 </section>
 
-<!-- FOOTER -->
+<a href="https://wa.me/218924173771" class="whatsapp">💬</a>
+
 <footer>
-  <p>© Rawan Group - Appasamy Libya</p>
+  © Rawan Group - Appasamy Libya
 </footer>
 
 </body>
