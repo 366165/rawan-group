@@ -3,194 +3,158 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Rawan Group</title>
 
 <style>
-body{
-margin:0;
-font-family:Arial;
-background:#071521;
-color:white;
+body {
+  margin:0;
+  font-family: Arial;
+  background:#0b1c2c;
+  color:white;
 }
 
-/* HEADER */
-header{
-padding:50px;
-text-align:center;
-background:linear-gradient(135deg,#071521,#0f2538);
+/* NAVBAR */
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  background:#071521;
 }
 
-h1{margin:10px 0;}
-p{color:#ccc;}
-
-.lang button{
-margin:5px;
-padding:8px 12px;
-border:none;
-background:#222;
-color:white;
-border-radius:6px;
-cursor:pointer;
+nav h1 {
+  font-size:20px;
 }
 
-/* PRODUCTS GRID */
-.products{
-padding:50px 20px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+nav a {
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
 }
 
-.card{
-background:#0f2538;
-padding:20px;
-border-radius:15px;
-text-align:center;
-transition:0.3s;
+/* HERO */
+header {
+  text-align:center;
+  padding:60px 20px;
 }
 
-.card:hover{
-transform:translateY(-5px);
+header img {
+  width:100px;
+  margin-bottom:20px;
 }
 
-.card img{
-width:100%;
-height:220px;
-object-fit:contain;
+header h2 {
+  font-size:40px;
+  margin:10px 0;
 }
 
-.card h3{
-margin:10px 0;
+/* BUTTON */
+.btn {
+  background:#00c896;
+  padding:10px 20px;
+  border-radius:8px;
+  color:white;
+  text-decoration:none;
 }
 
-.btn{
-display:inline-block;
-margin-top:10px;
-padding:10px 15px;
-background:#00c896;
-border-radius:8px;
-text-decoration:none;
-color:white;
+/* PRODUCTS */
+.products {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:40px;
+}
+
+.card {
+  background:white;
+  color:black;
+  width:300px;
+  margin:15px;
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width:100%;
+  border-radius:10px;
+}
+
+.card h3 {
+  margin:15px 0 10px;
+}
+
+.card p {
+  font-size:14px;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:20px;
+  background:#071521;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1 id="title">Rawan Group</h1>
-<p id="desc">Medical & Ophthalmology Equipment</p>
+<!-- NAVBAR -->
+<nav>
+  <h1>Rawan Group</h1>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
 
-<div class="lang">
-<button onclick="setLang('en')">English</button>
-<button onclick="setLang('ar')">العربية</button>
-</div>
+<!-- HERO -->
+<header>
+  <!-- حط اسم اللوقو هنا -->
+  <img src="IMG_5271.jpeg">
+
+  <h2>Rawan Group</h2>
+  <p>Medical & Ophthalmology Equipment</p>
+
+  <a href="#products" class="btn">View Products</a>
 </header>
 
-<section class="products">
+<!-- PRODUCTS -->
+<section id="products" class="products">
 
-<div class="card">
-<img src="yag.png">
-<h3 id="p1">YAG Laser</h3>
-<a class="btn" href="https://wa.me/218924173771">Order</a>
-</div>
+  <div class="card">
+    <img src="IMG_5271.jpeg">
+    <h3>YAG Laser</h3>
+    <p>ليزر جراحي دقيق للعيون</p>
+  </div>
 
-<div class="card">
-<img src="slit.png">
-<h3 id="p2">Slit Lamp</h3>
-<a class="btn" href="#">Order</a>
-</div>
+  <div class="card">
+    <img src="IMG_5271.jpeg">
+    <h3>Refraction Unit</h3>
+    <p>جهاز فحص نظر متكامل</p>
+  </div>
 
-<div class="card">
-<img src="bio.png">
-<h3 id="p3">BIO Ophthalmoscope</h3>
-<a class="btn" href="#">Order</a>
-</div>
+  <div class="card">
+    <img src="IMG_5271.jpeg">
+    <h3>Slit Lamp</h3>
+    <p>جهاز فحص العين الأمامي</p>
+  </div>
 
-<div class="card">
-<img src="refraction.png">
-<h3 id="p4">Refraction Unit</h3>
-<a class="btn" href="#">Order</a>
-</div>
-
-<div class="card">
-<img src="fundus.png">
-<h3 id="p5">Fundus Camera</h3>
-<a class="btn" href="#">Order</a>
-</div>
-
-<div class="card">
-<img src="ultra.png">
-<h3 id="p6">Ultrasound Scanner</h3>
-<a class="btn" href="#">Order</a>
-</div>
-
-<div class="card">
-<img src="lens.png">
-<h3 id="p7">Lensometer</h3>
-<a class="btn" href="#">Order</a>
-</div>
-
-<div class="card">
-<img src="tonometer.png">
-<h3 id="p8">Tonometer</h3>
-<a class="btn" href="#">Order</a>
-</div>
-
-<div class="card">
-<img src="table.png">
-<h3 id="p9">Operation Table</h3>
-<a class="btn" href="#">Order</a>
-</div>
-
-<div class="card">
-<img src="microscope.png">
-<h3 id="p10">Surgical Microscope</h3>
-<a class="btn" href="#">Order</a>
-</div>
+  <div class="card">
+    <img src="IMG_5271.jpeg">
+    <h3>Surgical Microscope</h3>
+    <p>ميكروسكوب جراحي للعيون</p>
+  </div>
 
 </section>
 
-<script>
-function setLang(lang){
-
-if(lang==="ar"){
-document.body.style.direction="rtl";
-
-document.getElementById("title").innerText="روان جروب";
-document.getElementById("desc").innerText="معدات طبية وعيون";
-
-document.getElementById("p1").innerText="جهاز ليزر YAG";
-document.getElementById("p2").innerText="المصباح الشقي";
-document.getElementById("p3").innerText="منظار العين";
-document.getElementById("p4").innerText="وحدة الفحص";
-document.getElementById("p5").innerText="كاميرا الشبكية";
-document.getElementById("p6").innerText="جهاز الموجات";
-document.getElementById("p7").innerText="جهاز قياس العدسات";
-document.getElementById("p8").innerText="جهاز الضغط";
-document.getElementById("p9").innerText="طاولة العمليات";
-document.getElementById("p10").innerText="الميكروسكوب الجراحي";
-
-}else{
-document.body.style.direction="ltr";
-
-document.getElementById("title").innerText="Rawan Group";
-document.getElementById("desc").innerText="Medical & Ophthalmology Equipment";
-
-document.getElementById("p1").innerText="YAG Laser";
-document.getElementById("p2").innerText="Slit Lamp";
-document.getElementById("p3").innerText="BIO Ophthalmoscope";
-document.getElementById("p4").innerText="Refraction Unit";
-document.getElementById("p5").innerText="Fundus Camera";
-document.getElementById("p6").innerText="Ultrasound Scanner";
-document.getElementById("p7").innerText="Lensometer";
-document.getElementById("p8").innerText="Tonometer";
-document.getElementById("p9").innerText="Operation Table";
-document.getElementById("p10").innerText="Surgical Microscope";
-}
-
-}
-</script>
+<!-- FOOTER -->
+<footer>
+  <p>© Rawan Group - Appasamy Libya</p>
+</footer>
 
 </body>
 </html>
