@@ -7,60 +7,70 @@
 
 <style>
 body{
-    margin:0;
-    font-family:Arial;
-    background:#071521;
-    color:white;
-    text-align:center;
+margin:0;
+font-family:Arial;
+background:#071521;
+color:white;
 }
 
 /* HEADER */
 header{
-    padding:60px 20px;
-    background:linear-gradient(135deg,#071521,#0f2538);
+padding:50px;
+text-align:center;
+background:linear-gradient(135deg,#071521,#0f2538);
 }
 
-.logo{
-    height:60px;
+h1{margin:10px 0;}
+p{color:#ccc;}
+
+.lang button{
+margin:5px;
+padding:8px 12px;
+border:none;
+background:#222;
+color:white;
+border-radius:6px;
+cursor:pointer;
 }
 
-/* BUTTON */
-.btn{
-    padding:12px 20px;
-    background:#00c896;
-    border-radius:8px;
-    text-decoration:none;
-    color:white;
-    display:inline-block;
-    margin:10px;
-}
-
-/* PRODUCTS */
+/* PRODUCTS GRID */
 .products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    padding:40px;
+padding:50px 20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
 .card{
-    background:#0f2538;
-    border-radius:10px;
-    overflow:hidden;
+background:#0f2538;
+padding:20px;
+border-radius:15px;
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
+width:100%;
+height:220px;
+object-fit:contain;
 }
 
-.lang-btn{
-    margin-top:10px;
-    cursor:pointer;
-    background:#222;
-    padding:8px 12px;
-    border-radius:6px;
+.card h3{
+margin:10px 0;
+}
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 15px;
+background:#00c896;
+border-radius:8px;
+text-decoration:none;
+color:white;
 }
 </style>
 </head>
@@ -68,48 +78,115 @@ header{
 <body>
 
 <header>
-
-<img src="logo.png" class="logo">
-
 <h1 id="title">Rawan Group</h1>
 <p id="desc">Medical & Ophthalmology Equipment</p>
 
-<div>
-<span class="lang-btn" onclick="setLang('en')">English</span>
-<span class="lang-btn" onclick="setLang('ar')">العربية</span>
+<div class="lang">
+<button onclick="setLang('en')">English</button>
+<button onclick="setLang('ar')">العربية</button>
 </div>
-
 </header>
 
-<!-- PRODUCTS -->
-<div class="products">
+<section class="products">
 
 <div class="card">
-<img src="148DA614-FBB5-4A0D-9E33-81453802A1AF.png">
+<img src="yag.png">
 <h3 id="p1">YAG Laser</h3>
-<a class="btn" href="https://wa.me/218924173771" id="order">Order Now</a>
+<a class="btn" href="https://wa.me/218924173771">Order</a>
 </div>
 
+<div class="card">
+<img src="slit.png">
+<h3 id="p2">Slit Lamp</h3>
+<a class="btn" href="#">Order</a>
 </div>
+
+<div class="card">
+<img src="bio.png">
+<h3 id="p3">BIO Ophthalmoscope</h3>
+<a class="btn" href="#">Order</a>
+</div>
+
+<div class="card">
+<img src="refraction.png">
+<h3 id="p4">Refraction Unit</h3>
+<a class="btn" href="#">Order</a>
+</div>
+
+<div class="card">
+<img src="fundus.png">
+<h3 id="p5">Fundus Camera</h3>
+<a class="btn" href="#">Order</a>
+</div>
+
+<div class="card">
+<img src="ultra.png">
+<h3 id="p6">Ultrasound Scanner</h3>
+<a class="btn" href="#">Order</a>
+</div>
+
+<div class="card">
+<img src="lens.png">
+<h3 id="p7">Lensometer</h3>
+<a class="btn" href="#">Order</a>
+</div>
+
+<div class="card">
+<img src="tonometer.png">
+<h3 id="p8">Tonometer</h3>
+<a class="btn" href="#">Order</a>
+</div>
+
+<div class="card">
+<img src="table.png">
+<h3 id="p9">Operation Table</h3>
+<a class="btn" href="#">Order</a>
+</div>
+
+<div class="card">
+<img src="microscope.png">
+<h3 id="p10">Surgical Microscope</h3>
+<a class="btn" href="#">Order</a>
+</div>
+
+</section>
 
 <script>
 function setLang(lang){
 
-if(lang === "ar"){
-document.body.style.direction = "rtl";
+if(lang==="ar"){
+document.body.style.direction="rtl";
 
-document.getElementById("title").innerText = "روان جروب";
-document.getElementById("desc").innerText = "معدات طبية وعيون";
-document.getElementById("p1").innerText = "جهاز ليزر YAG";
-document.getElementById("order").innerText = "اطلب الآن";
+document.getElementById("title").innerText="روان جروب";
+document.getElementById("desc").innerText="معدات طبية وعيون";
+
+document.getElementById("p1").innerText="جهاز ليزر YAG";
+document.getElementById("p2").innerText="المصباح الشقي";
+document.getElementById("p3").innerText="منظار العين";
+document.getElementById("p4").innerText="وحدة الفحص";
+document.getElementById("p5").innerText="كاميرا الشبكية";
+document.getElementById("p6").innerText="جهاز الموجات";
+document.getElementById("p7").innerText="جهاز قياس العدسات";
+document.getElementById("p8").innerText="جهاز الضغط";
+document.getElementById("p9").innerText="طاولة العمليات";
+document.getElementById("p10").innerText="الميكروسكوب الجراحي";
 
 }else{
-document.body.style.direction = "ltr";
+document.body.style.direction="ltr";
 
-document.getElementById("title").innerText = "Rawan Group";
-document.getElementById("desc").innerText = "Medical & Ophthalmology Equipment";
-document.getElementById("p1").innerText = "YAG Laser";
-document.getElementById("order").innerText = "Order Now";
+document.getElementById("title").innerText="Rawan Group";
+document.getElementById("desc").innerText="Medical & Ophthalmology Equipment";
+
+document.getElementById("p1").innerText="YAG Laser";
+document.getElementById("p2").innerText="Slit Lamp";
+document.getElementById("p3").innerText="BIO Ophthalmoscope";
+document.getElementById("p4").innerText="Refraction Unit";
+document.getElementById("p5").innerText="Fundus Camera";
+document.getElementById("p6").innerText="Ultrasound Scanner";
+document.getElementById("p7").innerText="Lensometer";
+document.getElementById("p8").innerText="Tonometer";
+document.getElementById("p9").innerText="Operation Table";
+document.getElementById("p10").innerText="Surgical Microscope";
 }
 
 }
