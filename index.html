@@ -1,140 +1,165 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rawan Group</title>
 
 <style>
-body {
-  margin:0;
-  font-family: Arial;
-  background:#0b1c2c;
-  color:white;
+body{
+margin:0;
+font-family:Arial;
+background:#0b1f2a;
+color:white;
+text-align:center;
 }
 
 /* NAVBAR */
-nav {
-  display:flex;
-  justify-content:space-between;
-  padding:15px 20px;
-  background:#071521;
+nav{
+background:#071521;
+padding:15px;
 }
 
-nav a {
-  color:white;
-  text-decoration:none;
-  margin:0 10px;
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
 }
 
-/* HERO */
-header {
-  text-align:center;
-  padding:60px 20px;
+/* HEADER */
+header{
+padding:40px;
 }
 
-header img {
-  width:80px;
-}
-
-.btn {
-  background:#00c896;
-  padding:10px 20px;
-  border-radius:8px;
-  color:white;
-  text-decoration:none;
+.logo{
+width:120px;
+margin-bottom:10px;
 }
 
 /* PRODUCTS */
-.products {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-  padding:20px;
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
 }
 
-.card {
-  background:white;
-  color:black;
-  padding:15px;
-  border-radius:10px;
-  text-align:center;
+.card{
+background:white;
+color:black;
+border-radius:12px;
+padding:10px;
+transition:0.3s;
 }
 
-.card img {
-  width:100%;
+.card:hover{
+transform:scale(1.05);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+/* BUTTON */
+.btn{
+background:#00c896;
+color:white;
+padding:10px;
+border-radius:8px;
+display:inline-block;
+margin-top:10px;
+text-decoration:none;
 }
 
 /* WHATSAPP */
-.whatsapp {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  padding:12px;
-  border-radius:50%;
-  color:white;
-  text-decoration:none;
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+border-radius:50%;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:25px;
+text-decoration:none;
 }
 
 /* FOOTER */
-footer {
-  text-align:center;
-  padding:15px;
-  background:#071521;
+footer{
+padding:20px;
+background:#071521;
 }
 </style>
-</head>
 
+</head>
 <body>
 
+<!-- NAVBAR -->
 <nav>
-  <b>Rawan Group</b>
-  <div>
-    <a href="#">الرئيسية</a>
-    <a href="#products">الأجهزة</a>
-  </div>
+<a href="#">الرئيسية</a>
+<a href="#products">الأجهزة</a>
+<a href="#contact">تواصل</a>
 </nav>
 
+<!-- HEADER -->
 <header>
-  <img src="IMG_5271.jpeg">
-  <h2>Rawan Group</h2>
-  <p>معدات طب وجراحة العيون</p>
-  <a href="#products" class="btn">عرض الأجهزة</a>
+<img src="IMG_5271.jpeg" class="logo">
+<h1>Rawan Group</h1>
+<p>معدات طب وجراحة العيون</p>
 </header>
 
-<section id="products" class="products">
+<!-- PRODUCTS -->
+<div id="products" class="products">
 
-  <div class="card">
-    <img src="IMG_5271.jpeg">
-    <h3>YAG Laser</h3>
-    <p>ليزر جراحي دقيق</p>
-  </div>
+<div class="card">
+<img src="1F82EA27-3B7B-4E00-AFE7-D259D685A22D.png">
+<h3>Ultrasound</h3>
+<p>جهاز تصوير العين</p>
+</div>
 
-  <div class="card">
-    <img src="IMG_5271.jpeg">
-    <h3>Refraction Unit</h3>
-    <p>وحدة فحص نظر</p>
-  </div>
+<div class="card">
+<img src="20B930E9-2ED3-46F8-AC99-D300194B7418.png">
+<h3>Operation Table</h3>
+<p>طاولة عمليات</p>
+</div>
 
-  <div class="card">
-    <img src="IMG_5271.jpeg">
-    <h3>Slit Lamp</h3>
-    <p>فحص العين الأمامي</p>
-  </div>
+<div class="card">
+<img src="3A58C500-DEA0-4606-ABDC-1C161C990E0D.png">
+<h3>Lensometer</h3>
+<p>قياس العدسات</p>
+</div>
 
-  <div class="card">
-    <img src="IMG_5271.jpeg">
-    <h3>Microscope</h3>
-    <p>ميكروسكوب جراحي</p>
-  </div>
+<div class="card">
+<img src="910E550D-E20D-46C4-B9AD-C51C831EEF24.png">
+<h3>Slit Lamp</h3>
+<p>فحص العين</p>
+</div>
 
-</section>
+</div>
 
+<!-- CONTACT -->
+<div id="contact">
+<h2>تواصل معنا</h2>
+
+<p>📞 00218913200543</p>
+
+<p>📧 Rawanmedical@yahoo.com</p>
+<p>📧 info.rawan.33@gmail.com</p>
+
+<a href="https://wa.me/218924173771" class="btn">راسلنا واتساب</a>
+</div>
+
+<!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/218924173771" class="whatsapp">💬</a>
 
+<!-- FOOTER -->
 <footer>
-  © Rawan Group - Appasamy Libya
+© Rawan Group - Appasamy Libya
 </footer>
 
 </body>
