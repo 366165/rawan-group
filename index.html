@@ -3,25 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rawan Group</title>
+<title>Rawan Group - APPASAMY Libya</title>
 
 <style>
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family:Arial;
     background:#0b1c2c;
     color:white;
 }
 
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:#081520;
+}
+
+nav h2{
+    margin:0;
+}
+
+.lang-btn{
+    cursor:pointer;
+    background:#00c896;
+    padding:8px 15px;
+    border-radius:5px;
+}
+
+/* HEADER */
 header{
-    padding:80px 20px;
     text-align:center;
+    padding:80px 20px;
     background:linear-gradient(135deg,#0b1c2c,#123a5c);
 }
 
 h1{
-    font-size:42px;
-    margin-bottom:10px;
+    font-size:40px;
 }
 
 p{
@@ -33,17 +53,12 @@ p{
     padding:15px 30px;
     margin:10px;
     background:#00c896;
-    color:white;
-    text-decoration:none;
     border-radius:8px;
-    font-weight:bold;
-    transition:0.3s;
+    text-decoration:none;
+    color:white;
 }
 
-.btn:hover{
-    background:#00a67d;
-}
-
+/* SECTIONS */
 section{
     padding:60px 20px;
     text-align:center;
@@ -61,19 +76,12 @@ section{
     padding:25px;
     border-radius:10px;
     width:250px;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    background:#184066;
 }
 
 footer{
     text-align:center;
     padding:20px;
     background:#081520;
-    color:#aaa;
 }
 </style>
 
@@ -81,35 +89,87 @@ footer{
 
 <body>
 
-<header>
-    <h1>Rawan Group</h1>
-    <p>Medical & Ophthalmology Equipment</p>
+<!-- NAV -->
+<nav>
+    <h2>Rawan Group</h2>
+    <div class="lang-btn" onclick="toggleLang()">AR / EN</div>
+</nav>
 
-    <!-- 🔥 الأزرار -->
-    <div>
-        <a class="btn" href="products.html">View Products</a>
-        <a class="btn" href="https://wa.me/218924173771">Contact on WhatsApp</a>
-    </div>
+<!-- HEADER -->
+<header>
+    <h1 id="title">Medical & Ophthalmology Equipment</h1>
+    <p id="desc">Official distributor of APPASAMY in Libya</p>
+
+    <a class="btn" href="products.html" id="productsBtn">View Products</a>
+    <a class="btn" href="https://wa.me/218924173771" id="contactBtn">Contact on WhatsApp</a>
 </header>
 
+<!-- ABOUT -->
 <section>
-    <h2>About Us</h2>
-    <p>We provide high-quality medical and ophthalmology equipment with trusted international brands.</p>
+    <h2 id="aboutTitle">About Us</h2>
+    <p id="aboutText">
+        We provide high-quality ophthalmology equipment with trusted international brands.
+    </p>
 </section>
 
+<!-- SERVICES -->
 <section>
-    <h2>Our Services</h2>
+    <h2 id="servicesTitle">Our Services</h2>
 
     <div class="services">
-        <div class="card">Eye Diagnostic Devices</div>
-        <div class="card">Surgical Equipment</div>
-        <div class="card">Medical Supplies</div>
+        <div class="card" id="s1">Eye Diagnostic Devices</div>
+        <div class="card" id="s2">Surgical Equipment</div>
+        <div class="card" id="s3">Medical Supplies</div>
     </div>
 </section>
 
 <footer>
-    Rawan Group - All Rights Reserved
+    Rawan Group - APPASAMY Libya
 </footer>
+
+<!-- SCRIPT -->
+<script>
+let isArabic = false;
+
+function toggleLang(){
+    isArabic = !isArabic;
+
+    if(isArabic){
+        document.body.dir = "rtl";
+
+        document.getElementById("title").innerText = "معدات طبية وطب العيون";
+        document.getElementById("desc").innerText = "الموزع الرسمي لشركة APPASAMY في ليبيا";
+
+        document.getElementById("productsBtn").innerText = "عرض المنتجات";
+        document.getElementById("contactBtn").innerText = "تواصل عبر واتساب";
+
+        document.getElementById("aboutTitle").innerText = "من نحن";
+        document.getElementById("aboutText").innerText = "نقدم أجهزة طب العيون عالية الجودة من أفضل الشركات العالمية";
+
+        document.getElementById("servicesTitle").innerText = "خدماتنا";
+        document.getElementById("s1").innerText = "أجهزة تشخيص العيون";
+        document.getElementById("s2").innerText = "معدات جراحية";
+        document.getElementById("s3").innerText = "مستلزمات طبية";
+
+    }else{
+        document.body.dir = "ltr";
+
+        document.getElementById("title").innerText = "Medical & Ophthalmology Equipment";
+        document.getElementById("desc").innerText = "Official distributor of APPASAMY in Libya";
+
+        document.getElementById("productsBtn").innerText = "View Products";
+        document.getElementById("contactBtn").innerText = "Contact on WhatsApp";
+
+        document.getElementById("aboutTitle").innerText = "About Us";
+        document.getElementById("aboutText").innerText = "We provide high-quality ophthalmology equipment with trusted international brands.";
+
+        document.getElementById("servicesTitle").innerText = "Our Services";
+        document.getElementById("s1").innerText = "Eye Diagnostic Devices";
+        document.getElementById("s2").innerText = "Surgical Equipment";
+        document.getElementById("s3").innerText = "Medical Supplies";
+    }
+}
+</script>
 
 </body>
 </html>
