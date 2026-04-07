@@ -11,25 +11,56 @@ body{
     font-family:Arial;
     background:#071521;
     color:white;
+    text-align:center;
 }
 
+/* HEADER */
 header{
-    padding:80px 20px;
-    text-align:center;
+    padding:60px 20px;
     background:linear-gradient(135deg,#071521,#0f2538);
 }
 
-h1{font-size:40px;}
-p{color:#ccc;}
+.logo{
+    height:60px;
+}
 
+/* BUTTON */
 .btn{
-    margin-top:20px;
-    display:inline-block;
-    padding:15px 25px;
+    padding:12px 20px;
     background:#00c896;
-    color:white;
-    text-decoration:none;
     border-radius:8px;
+    text-decoration:none;
+    color:white;
+    display:inline-block;
+    margin:10px;
+}
+
+/* PRODUCTS */
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:40px;
+}
+
+.card{
+    background:#0f2538;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.lang-btn{
+    margin-top:10px;
+    cursor:pointer;
+    background:#222;
+    padding:8px 12px;
+    border-radius:6px;
 }
 </style>
 </head>
@@ -37,10 +68,52 @@ p{color:#ccc;}
 <body>
 
 <header>
-    <h1>Rawan Group</h1>
-    <p>Medical & Ophthalmology Equipment</p>
-    <a class="btn" href="products.html">View Products</a>
+
+<img src="logo.png" class="logo">
+
+<h1 id="title">Rawan Group</h1>
+<p id="desc">Medical & Ophthalmology Equipment</p>
+
+<div>
+<span class="lang-btn" onclick="setLang('en')">English</span>
+<span class="lang-btn" onclick="setLang('ar')">العربية</span>
+</div>
+
 </header>
+
+<!-- PRODUCTS -->
+<div class="products">
+
+<div class="card">
+<img src="148DA614-FBB5-4A0D-9E33-81453802A1AF.png">
+<h3 id="p1">YAG Laser</h3>
+<a class="btn" href="https://wa.me/218924173771" id="order">Order Now</a>
+</div>
+
+</div>
+
+<script>
+function setLang(lang){
+
+if(lang === "ar"){
+document.body.style.direction = "rtl";
+
+document.getElementById("title").innerText = "روان جروب";
+document.getElementById("desc").innerText = "معدات طبية وعيون";
+document.getElementById("p1").innerText = "جهاز ليزر YAG";
+document.getElementById("order").innerText = "اطلب الآن";
+
+}else{
+document.body.style.direction = "ltr";
+
+document.getElementById("title").innerText = "Rawan Group";
+document.getElementById("desc").innerText = "Medical & Ophthalmology Equipment";
+document.getElementById("p1").innerText = "YAG Laser";
+document.getElementById("order").innerText = "Order Now";
+}
+
+}
+</script>
 
 </body>
 </html>
