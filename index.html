@@ -1,6 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rawan Group</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(135deg,#071521,#0b1f2a);
+  color:white;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 25px;
+  background:rgba(0,0,0,0.4);
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img{
+  height:45px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  background:#25D366;
+  padding:8px 15px;
+  border-radius:6px;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.hero img{
+  width:200px;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:40px;
+}
+
+.hero p{
+  color:#ccc;
+}
+
+.btn-main{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  background:#0bbf9a;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+}
+
+/* CARDS */
+.products{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap:25px;
+  padding:30px;
+}
+
+.card{
+  background:white;
+  color:black;
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.4s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card h3{
+  text-align:center;
+}
+
+.card a{
+  display:block;
+  margin:15px;
+  padding:10px;
+  background:#0bbf9a;
+  color:white;
+  text-align:center;
+  text-decoration:none;
+  border-radius:8px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#071521;
+  margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <img src="IMG_5271.jpeg">
+    <b>Rawan Group</b>
+  </div>
+  <a href="https://wa.me/218924173771">WhatsApp</a>
+</nav>
+
 <div class="hero">
+  <img src="IMG_5271.jpeg">
   <h1>Rawan Group</h1>
-  <p>اختر الوكالة</p>
+  <p>Official Distributor - Appasamy & G-MEDICS</p>
+  <a class="btn-main" href="https://wa.me/218924173771">طلب عرض سعر</a>
 </div>
 
 <div class="products">
@@ -8,13 +159,22 @@
   <div class="card">
     <img src="IMG_5271.jpeg">
     <h3>Appasamy</h3>
-    <a href="appasamy.html">دخول</a>
+    <a href="appasamy.html">View Devices</a>
   </div>
 
   <div class="card">
     <img src="g1.png">
     <h3>G-MEDICS</h3>
-    <a href="gmedics.html">دخول</a>
+    <a href="gmedics.html">View Devices</a>
   </div>
 
 </div>
+
+<a href="https://wa.me/218924173771" class="whatsapp">💬</a>
+
+<footer>
+© Rawan Group - Appasamy Libya
+</footer>
+
+</body>
+</html>
