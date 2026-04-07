@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rawan Group</title>
+<title>Rawan Medical Group</title>
 
 <style>
 
@@ -18,19 +18,8 @@ body{
 nav{
   display:flex;
   justify-content:space-between;
-  align-items:center;
   padding:15px 25px;
-  background:rgba(0,0,0,0.4);
-}
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.logo img{
-  height:45px;
+  background:#071521;
 }
 
 nav a{
@@ -44,72 +33,64 @@ nav a{
 /* HERO */
 .hero{
   text-align:center;
-  padding:80px 20px;
+  padding:60px 20px;
 }
 
 .hero img{
-  width:200px;
-  margin-bottom:20px;
+  width:220px;
 }
 
 .hero h1{
-  font-size:40px;
+  font-size:38px;
 }
 
-.hero p{
+/* ABOUT */
+.about{
+  padding:30px;
+  text-align:center;
+}
+
+.about p{
+  max-width:700px;
+  margin:auto;
   color:#ccc;
-}
-
-.btn-main{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 25px;
-  background:#0bbf9a;
-  color:white;
-  border-radius:8px;
-  text-decoration:none;
 }
 
 /* CARDS */
 .products{
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap:25px;
-  padding:30px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:20px;
 }
 
 .card{
   background:white;
   color:black;
-  border-radius:15px;
+  border-radius:12px;
   overflow:hidden;
-  transition:0.4s;
-  box-shadow:0 10px 25px rgba(0,0,0,0.4);
-}
-
-.card:hover{
-  transform:translateY(-10px);
 }
 
 .card img{
   width:100%;
-  height:200px;
+  height:180px;
   object-fit:cover;
-}
-
-.card h3{
-  text-align:center;
 }
 
 .card a{
   display:block;
-  margin:15px;
-  padding:10px;
+  padding:12px;
   background:#0bbf9a;
   color:white;
   text-align:center;
   text-decoration:none;
-  border-radius:8px;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+  padding:30px;
+  background:#071521;
 }
 
 /* WHATSAPP */
@@ -118,19 +99,11 @@ nav a{
   bottom:20px;
   right:20px;
   background:#25D366;
-  color:white;
   padding:15px;
   border-radius:50%;
-  font-size:20px;
   text-decoration:none;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  background:#071521;
-  margin-top:40px;
+  color:white;
+  font-size:18px;
 }
 
 </style>
@@ -140,41 +113,76 @@ footer{
 <body>
 
 <nav>
-  <div class="logo">
-    <img src="IMG_5271.jpeg">
-    <b>Rawan Group</b>
-  </div>
+  <b>Rawan Group</b>
   <a href="https://wa.me/218924173771">WhatsApp</a>
 </nav>
 
 <div class="hero">
   <img src="IMG_5271.jpeg">
-  <h1>Rawan Group</h1>
-  <p>Official Distributor - Appasamy & G-MEDICS</p>
-  <a class="btn-main" href="https://wa.me/218924173771">طلب عرض سعر</a>
+  <h1>Rawan Medical Group</h1>
+  <p>Official Distributor of Ophthalmology Equipment in Libya</p>
 </div>
 
+<!-- ABOUT AR -->
+<div class="about">
+  <h2>من نحن</h2>
+  <p>
+  مجموعة الروان الطبية شركة رائدة في مجال أجهزة طب وجراحة العيون في ليبيا منذ عام 2004.
+  نحن وكلاء معتمدون لعدة شركات عالمية، ونوفر أحدث الأجهزة الطبية للعيادات والمستشفيات.
+  </p>
+
+  <p>
+  نقدم خدمات متكاملة تشمل التوريد، التركيب، التدريب، وخدمات ما بعد البيع،
+  بالإضافة إلى الصيانة والدعم الفني لجميع الأجهزة لضمان أفضل أداء واستمرارية العمل.
+  </p>
+</div>
+
+<!-- ABOUT EN -->
+<div class="about">
+  <h2>About Us</h2>
+  <p>
+  Rawan Medical Group is a leading company in ophthalmology equipment in Libya since 2004.
+  We are authorized distributors for international brands, providing high-quality devices to clinics and hospitals.
+  </p>
+
+  <p>
+  We offer supply, installation, training, after-sales services, and full maintenance support for all devices.
+  </p>
+</div>
+
+<!-- FEATURES -->
+<div class="about">
+  <h2>Why Choose Us</h2>
+  <p>✔ Authorized distributors</p>
+  <p>✔ After-sales service & maintenance</p>
+  <p>✔ Technical support لجميع الأجهزة</p>
+  <p>✔ Fast response & professional service</p>
+</div>
+
+<!-- BRANDS -->
 <div class="products">
 
   <div class="card">
     <img src="IMG_5271.jpeg">
-    <h3>Appasamy</h3>
-    <a href="appasamy.html">View Devices</a>
+    <a href="appasamy.html">APPASAMY</a>
   </div>
 
   <div class="card">
-    <img src="g1.png">
-    <h3>G-MEDICS</h3>
-    <a href="gmedics.html">View Devices</a>
+    <img src="IMG_5346.jpeg">
+    <a href="gmedics.html">G-MEDICS</a>
   </div>
 
 </div>
 
-<a href="https://wa.me/218924173771" class="whatsapp">💬</a>
+<!-- CONTACT -->
+<div class="contact">
+  <h2>Contact</h2>
+  <p>📧 Rawanmedical@yahoo.com</p>
+  <p>📧 info.rawan.33@gmail.com</p>
+  <p>📞 00218913200543</p>
+</div>218924173771
 
-<footer>
-© Rawan Group - Appasamy Libya
-</footer>
+<a href="https://wa.me/218924173771" class="whatsapp">💬</a>
 
 </body>
 </html>
