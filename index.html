@@ -6,63 +6,74 @@
 <title>Rawan Group</title>
 
 <style>
-body {
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#0b1c2c;
-  color:white;
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0b1c2c;
+    color:white;
 }
 
-header {
-  padding:60px 20px;
-  text-align:center;
-  background:linear-gradient(135deg,#0b1c2c,#123a5c);
+header{
+    padding:80px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,#0b1c2c,#123a5c);
 }
 
-h1 {
-  font-size:42px;
-  margin-bottom:10px;
+h1{
+    font-size:42px;
+    margin-bottom:10px;
 }
 
-p {
-  color:#ccc;
-  font-size:16px;
+p{
+    color:#ccc;
 }
 
-.btn {
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 30px;
-  background:#00c896;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
+.btn{
+    display:inline-block;
+    padding:15px 30px;
+    margin:10px;
+    background:#00c896;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
 }
 
-section {
-  padding:50px 20px;
-  text-align:center;
+.btn:hover{
+    background:#00a67d;
 }
 
-.services {
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  margin-top:20px;
+section{
+    padding:60px 20px;
+    text-align:center;
 }
 
-.card {
-  background:#12283a;
-  padding:15px;
-  border-radius:10px;
+.services{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
 }
 
-footer {
-  padding:20px;
-  text-align:center;
-  background:#091521;
-  color:#777;
+.card{
+    background:#132f4c;
+    padding:25px;
+    border-radius:10px;
+    width:250px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    background:#184066;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#081520;
+    color:#aaa;
 }
 </style>
 
@@ -71,29 +82,33 @@ footer {
 <body>
 
 <header>
-  <h1>Rawan Group</h1>
-  <p>Medical & Ophthalmology Equipment</p>
-  <a class="btn" href="https://wa.me/218924173771">Contact Us on WhatsApp</a>
+    <h1>Rawan Group</h1>
+    <p>Medical & Ophthalmology Equipment</p>
+
+    <!-- 🔥 الأزرار -->
+    <div>
+        <a class="btn" href="products.html">View Products</a>
+        <a class="btn" href="https://wa.me/218924173771">Contact on WhatsApp</a>
+    </div>
 </header>
 
 <section>
-  <h2>About Us</h2>
-  <p>
-    We provide high-quality medical and ophthalmology equipment with trusted international brands.
-  </p>
+    <h2>About Us</h2>
+    <p>We provide high-quality medical and ophthalmology equipment with trusted international brands.</p>
 </section>
 
 <section>
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card">Eye Diagnostic Devices</div>
-    <div class="card">Surgical Equipment</div>
-    <div class="card">Medical Supplies</div>
-  </div>
+    <h2>Our Services</h2>
+
+    <div class="services">
+        <div class="card">Eye Diagnostic Devices</div>
+        <div class="card">Surgical Equipment</div>
+        <div class="card">Medical Supplies</div>
+    </div>
 </section>
 
 <footer>
-  © 2026 Rawan Group - All Rights Reserved
+    Rawan Group - All Rights Reserved
 </footer>
 
 </body>
