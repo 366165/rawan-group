@@ -10,7 +10,7 @@
 body{
   margin:0;
   font-family:'Segoe UI',sans-serif;
-  background:linear-gradient(135deg,#071521,#0b1f2a);
+  background:linear-gradient(135deg,#020617,#0f172a);
   color:white;
 }
 
@@ -18,22 +18,22 @@ body{
 nav{
   display:flex;
   justify-content:space-between;
-  padding:15px 25px;
-  background:#071521;
+  align-items:center;
+  padding:20px;
 }
 
 nav a{
-  color:white;
-  text-decoration:none;
   background:#25D366;
-  padding:8px 15px;
-  border-radius:6px;
+  padding:10px 15px;
+  border-radius:8px;
+  text-decoration:none;
+  color:white;
 }
 
 /* HERO */
 .hero{
   text-align:center;
-  padding:60px 20px;
+  padding:80px 20px;
 }
 
 .hero img{
@@ -41,73 +41,87 @@ nav a{
 }
 
 .hero h1{
-  font-size:38px;
+  font-size:42px;
 }
 
-/* ABOUT */
-.about{
-  padding:30px;
+.hero p{
+  color:#ccc;
+  max-width:600px;
+  margin:auto;
+}
+
+/* BUTTON */
+.main-btn{
+  margin-top:20px;
+  display:inline-block;
+  padding:12px 25px;
+  background:#0bbf9a;
+  border-radius:10px;
+  text-decoration:none;
+  color:white;
+}
+
+/* SECTION */
+.section{
+  padding:40px 20px;
   text-align:center;
 }
 
-.about p{
-  max-width:700px;
-  margin:auto;
-  color:#ccc;
-}
-
 /* CARDS */
-.products{
+.grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
   padding:20px;
 }
 
 .card{
-  background:white;
-  color:black;
-  border-radius:12px;
+  background:rgba(255,255,255,0.05);
+  border-radius:15px;
+  backdrop-filter:blur(10px);
   overflow:hidden;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
 }
 
 .card img{
   width:100%;
-  height:180px;
+  height:200px;
   object-fit:cover;
 }
 
 .card a{
   display:block;
-  padding:12px;
+  padding:15px;
   background:#0bbf9a;
-  color:white;
-  text-align:center;
   text-decoration:none;
+  color:white;
 }
 
 /* CONTACT */
 .contact{
-  text-align:center;
+  background:#020617;
   padding:30px;
-  background:#071521;
+  text-align:center;
 }
 
-/* WHATSAPP */
+/* WHATSAPP FLOAT */
 .whatsapp{
   position:fixed;
   bottom:20px;
   right:20px;
   background:#25D366;
-  padding:15px;
+  padding:18px;
   border-radius:50%;
   text-decoration:none;
   color:white;
-  font-size:18px;
+  font-size:20px;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -120,67 +134,56 @@ nav a{
 <div class="hero">
   <img src="IMG_5271.jpeg">
   <h1>Rawan Medical Group</h1>
-  <p>Official Distributor of Ophthalmology Equipment in Libya</p>
+  <p>
+  Leading provider of ophthalmology equipment in Libya since 2004  
+  Official distributor for international brands.
+  </p>
+
+  <a class="main-btn" href="https://wa.me/218924173771?text=نبي عرض سعر">
+    اطلب عرض سعر الآن
+  </a>
 </div>
 
-<!-- ABOUT AR -->
-<div class="about">
+<div class="section">
   <h2>من نحن</h2>
   <p>
-  مجموعة الروان الطبية شركة رائدة في مجال أجهزة طب وجراحة العيون في ليبيا منذ عام 2004.
-  نحن وكلاء معتمدون لعدة شركات عالمية، ونوفر أحدث الأجهزة الطبية للعيادات والمستشفيات.
-  </p>
-
-  <p>
-  نقدم خدمات متكاملة تشمل التوريد، التركيب، التدريب، وخدمات ما بعد البيع،
-  بالإضافة إلى الصيانة والدعم الفني لجميع الأجهزة لضمان أفضل أداء واستمرارية العمل.
+  مجموعة الروان الطبية تقدم أحدث أجهزة العيون في ليبيا،  
+  مع خدمات ما بعد البيع، الصيانة، والدعم الفني الكامل.
   </p>
 </div>
 
-<!-- ABOUT EN -->
-<div class="about">
+<div class="section">
   <h2>About Us</h2>
   <p>
-  Rawan Medical Group is a leading company in ophthalmology equipment in Libya since 2004.
-  We are authorized distributors for international brands, providing high-quality devices to clinics and hospitals.
-  </p>
-
-  <p>
-  We offer supply, installation, training, after-sales services, and full maintenance support for all devices.
+  We provide high-quality ophthalmology devices, installation,
+  training, and full maintenance support.
   </p>
 </div>
 
-<!-- FEATURES -->
-<div class="about">
-  <h2>Why Choose Us</h2>
-  <p>✔ Authorized distributors</p>
-  <p>✔ After-sales service & maintenance</p>
-  <p>✔ Technical support لجميع الأجهزة</p>
-  <p>✔ Fast response & professional service</p>
+<div class="section">
+  <h2>Our Brands</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="IMG_5271.jpeg">
+      <a href="appasamy.html">APPASAMY</a>
+    </div>
+
+    <div class="card">
+      <img src="IMG_5346.jpeg">
+      <a href="gmedics.html">G-MEDICS</a>
+    </div>
+
+  </div>
 </div>
 
-<!-- BRANDS -->
-<div class="products">
-
-  <div class="card">
-    <img src="IMG_5271.jpeg">
-    <a href="appasamy.html">APPASAMY</a>
-  </div>
-
-  <div class="card">
-    <img src="IMG_5346.jpeg">
-    <a href="gmedics.html">G-MEDICS</a>
-  </div>
-
-</div>
-
-<!-- CONTACT -->
 <div class="contact">
   <h2>Contact</h2>
   <p>📧 Rawanmedical@yahoo.com</p>
   <p>📧 info.rawan.33@gmail.com</p>
   <p>📞 00218913200543</p>
-</div>218924173771
+</div>
 
 <a href="https://wa.me/218924173771" class="whatsapp">💬</a>
 
